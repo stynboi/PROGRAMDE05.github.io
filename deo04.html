@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>น้อง DE04 | ค้นหาพี่รหัส</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Who is my <span class="highlight">น้องรหัส!?</span></div>
+    <label class="label">กรอกรหัส</label>
+    <input type="text" id="studentInput" class="input" placeholder="รหัสนศ 4 ตัวท้ายเช่น 260-6">
+    <button class="button button-blue" onclick="findPhi()">หาน้องรหัส</button>
+    <div id="studentResult" class="result"></div>
+  </div>
+  
+  <script>
+    const studentToHint = {
+  "230-6": "onyourf___xrn, Ji_rapatcj2",
+  "231-4": "wichi_tx",
+  "232-2": "4mlntxr",
+  "234-8": "rroselana, Ssp_50",
+  "235-6": "_tt_mulyyou, junonnyy",
+  "236-4": "panpdd",
+  "238-0": "_25.11pingch",
+  "240-3": "minidaowww_, papapraewiee_",
+  "241-1": "bbammm14",
+  "243-7": "eyesofbabam",
+  "244-5": "r.risa__, _axs.n",
+  "245-3": "dumbfeb_, aeim_thanakorn",
+  "246-1": "f.il.m28, cirilaquelle_",
+  "247-9": "bonnieapr",
+  "249-5": "kmxte_, Naynorss",
+  "250-0": "3iczy_iana",
+  "251-8": "ii.aummq",
+  "252-6": "rd_.asa",
+  "253-4": "C_RACHADA",
+  "255-0": "chyn.mark, I_pinmookkkk",
+  "256-8": "Dekyingjam",
+  "258-4": "inleeleekhawsan",
+  "260-7": "Axiaxxss",
+  "261-5": "tzexql, yeongann.z",
+  "262-3": "Pattaratida_179",
+  "263-1": "10younginfromslm",
+  "264-9": "snxytd, natnicha_jjww",
+  "265-7": "Perverxtype, pp.prnthip",
+  "266-5": "lculia_01, jsevna",
+  "267-3": "llaomlettell",
+  "268-1": "_imbxbxll",
+  "270-4": "Bank_90x, sophittaw",
+  "271-2": "aori.sepgurl",
+  "272-0": "Suphicjxx",
+  "274-6": "_itpaopee",
+  "275-4": "pannncc.ke",
+  "276-2": "Bamboo_tiwat, nwnams",
+  "278-8": "nisa_nisanath",
+  "279-6": "geonll_",
+  "281-9": "betty_botterboughtsomebutter",
+  "282-7": "tha_na_pat",
+  "283-5": "_iimati",
+  "284-3": "17.ttx, warin_nw",
+  "285-1": "momo.is.dog",
+  "286-9": "X.xser01011, keeta_px",
+  "287-7": "niilllvvel, KTS________",
+  "288-5": "_mamxxn_, Bell_kjnp",
+  "289-3": "nnesle__, fah.scl012",
+  "290-8": "srssrp_",
+  "291-7": "gunyavv, boztonx",
+  "294-0": "sky_zx.0",
+  "296-6": "achii._.n, apr_xlms",
+  "297-4": "Popiatraf",
+  "298-2": "choisuppy_, chxrniiz",
+  "299-0": "saithann00",
+  "300-1": "sainlnias",
+  "301-9": "IG: yyxrdd",
+  "574-4": "pormx_c, kim_.pnp",
+  "576-0": "isamareaon, G1xa6m",
+  "580-9": "fxipyc",
+  "581-7": "dom_natchapon",
+  "583-3": "Pigyxr_wn2",
+  "586-7": "nonoey_yy",
+  "588-3": "fa_o_gus, octozun",
+  "589-1": "_kunwan_",
+  "590-6": "_paxjirx",
+  "594-8": "Natchaqx.08",
+  "597-2": "chitapa.at",
+  "598-0": "pxmxaxa, kxupyz_",
+  "837-8": "bbutter.ss",
+  "838-6": "arm_csp, booboo.tx",
+  "839-4": "Boseoktan, npvh_99",
+  "841-7": "_13jiraxx__",
+  "842-5": "Paisit_mon",
+  "843-3": "zendaelle",
+  "844-1": "Izemoolizmyboo, Dino.saur_demo",
+  "849-1": "Sp_.cream, sirixal_",
+  "852-2": "isxerdez_, tianelle86",
+  "854-8": "kksnpxx__, wusyaname_namm",
+  "856-4": "p0rfor.th, fxng_n9",
+  "859-8": "s_pitttchx",
+  "860-3": "_xgung",
+  "861-1": "marsh_akphon"
+    };
+
+    function findPhi() {
+      const code = document.getElementById("studentInput").value.trim();
+      const hint = studentToHint[code];
+    document.getElementById("studentResult").innerHTML = hint
+    ? `<div class="hint-line"><span class="white-text">🎁 IG น้องรหัสของคุณคือ :</span> <span class="pink-text">${hint}</span></div>`
+    : `<div class="error-text">❌ ไม่พบรหัสนศในระบบ</div>`;
+  }
+  </script>
+</body>
+</html>
